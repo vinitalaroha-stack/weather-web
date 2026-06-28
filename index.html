@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<video autoplay muted loop id="bgVideo"  ><source src="videos/sunny.mp4" type="video/mp4"></video>
+    
+<div class="hero">
+    <div class="top-bar">
+        <p>📍 Weather in <b id="cityName"></b></p>
+        <P onclick="toggleUnit()">°C | °F</P>
+        <div class="top-right-menu">
+            <span>EN</span>
+            <span>|</span>
+            <span>RU</span>
+            <div class="menu-btn">M E N U</div>
+        </div>
+    </div>
+    <div class="search-box">
+        <p id="loadingMessage"></p>
+        <input type="text" id="city" placeholder="Enter city name">
+        <button onclick="getWeather()">Search</button>
+    </div>
+    <div class="weather-section">
+
+    <div class="left-weather">
+        <div class="icon" id="weatherIcon">🌤️</div>
+
+        <div class="temp-info">
+            <h1 id="temp">+22°C</h1>
+            <h2 id="feelsLike">Feels like 23°</h2>
+            <p id="description">The whole day will be cloudy. No precipitation.</p>
+            <div class="sun-times">
+            <span>Sunrise: <strong id="sunrise">04:59</strong></span>
+            <span>Sunset: &nbsp;<strong id="sunset">20:47</strong></span>
+        </div>
+    </div>
+    </div>
+    <div class="details">
+        <h3>MORE DETAILS:</h3>
+        <p><span>Wind speed</span>    <span id="windSpeed">1–8 m/s</span></p>
+        <p><span>Air humidity</span>  <span id="humidity">42–76%</span></p>
+        <p><span>Pressure</span>      <span id="pressure">747 hPa</span></p>
+        <p><span>Precipitation</span> <span id="precip">2%</span></p>
+        <p><span>Visibility</span>    <span id="visibility">10 km</span></p>
+    </div>
+    <div class="forecast-section">
+        <div class="forecast-header">
+        <span>TODAY</span>
+        <span>SHOW FOR 10 DAYS</span>
+    </div>
+    <div id="forecastContainer"></div>
+    </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
